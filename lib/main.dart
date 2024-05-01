@@ -157,7 +157,13 @@ class DetailsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: Image.network(imageUrl, fit: BoxFit.cover),
+            child: Padding(
+              padding: EdgeInsets.all(30.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30.0),
+                child: Image.network(imageUrl, fit: BoxFit.cover),
+              ),
+            ),
           ),
           Padding(
             padding: EdgeInsets.all(16),
